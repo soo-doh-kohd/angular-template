@@ -9,5 +9,5 @@ jobs:
     uses: soo-doh-kohd/pipeline/.github/workflows/pipeline.yml@main
     with:
       environment: 'dev'
-      project-name: '${{ env.GITHUB_ACTOR }}'
+      project-name: $GITHUB_ACTOR
       project-type: ''
