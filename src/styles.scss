@@ -1,0 +1,252 @@
+/******************************************************************************
+    Colors
+******************************************************************************/
+
+:root {
+    --primary-color: #1976d2;
+    --primary-font: #616161;
+  
+    --secondary-color: #4898e9;
+  }
+  
+
+/******************************************************************************
+    Global
+******************************************************************************/
+
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--primary-font);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+}
+  
+/* Adds 25 pixels at the bottom of the content section */
+.content::after { 
+    content: url('data:image/svg+xml;%20charset=utf8,%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2225%22%20width%3D%2225%22%3E%3C%2Fsvg%3E');
+}
+  
+
+/******************************************************************************
+    Header
+******************************************************************************/
+  
+header {
+    position: fixed;
+    top: 0;
+    left: 70px;
+    right: 0;
+
+    z-index: 5;
+  
+    height: 70px;
+  
+    background-color: var(--primary-color);
+}
+  
+  
+/******************************************************************************
+    Nav
+******************************************************************************/
+  
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  
+    z-index: 2;
+  
+    width: 70px;
+  
+    background-color: var(--secondary-color);
+    transition: width 0.15s;
+
+    &.expand {
+        width: 270px;
+
+        .items .item .title {
+            display: inherit !important;
+        }
+    }
+}
+  
+  
+/******************************************************************************
+    Content
+******************************************************************************/
+  
+content {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    right: 0;
+    bottom: 40px;
+  
+    padding: 0 20px;
+    overflow: auto;
+    transition: left 0.15s;
+
+    &.expand {
+        left: 270px;
+    }
+}
+  
+  
+/******************************************************************************
+    Footer
+******************************************************************************/
+  
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    height: 40px;
+  
+    display: flex;
+    background-color: var(--primary-color);
+    transition: left 0.15s;
+
+    &.expand {
+        left: 270px;
+    }
+}
+  
+  
+/******************************************************************************
+    Text
+******************************************************************************/
+  
+h1 {
+    font-size: 32px;
+}
+  
+h2 {
+    font-size: 20px;
+}
+  
+h1, h2 {
+    font-weight: lighter;
+}
+  
+p {
+    font-size: 14px;
+}
+  
+  
+/******************************************************************************
+    Hyperlink
+******************************************************************************/
+  
+a {
+    cursor: pointer;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+  
+a:hover {
+    opacity: 0.8;
+}
+  
+  
+/******************************************************************************
+    Input
+******************************************************************************/
+  
+input {
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #BDBDBD;
+}
+  
+label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+    text-transform: uppercase;
+}
+  
+  
+/******************************************************************************
+    Button
+******************************************************************************/
+  
+.button, button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+  
+.button:hover, button:hover {
+    opacity: 0.8;
+    font-weight: normal;
+}
+  
+.button:disabled, button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+  
+  
+/******************************************************************************
+    Fancy Button
+******************************************************************************/
+  
+.fancy-button {
+    background-color: white;
+    color: var(--primary-color);
+}
+  
+.fancy-button {
+    color: var(--primary-color);
+    padding-right: 4px;
+}
+  
+.center {
+    text-align: center;
+}
+  
+  
+/******************************************************************************
+    Icons
+******************************************************************************/
+  
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/material-icons.woff2) format('woff2');
+}
+  
+.icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}

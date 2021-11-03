@@ -1,0 +1,9 @@
+<header></header>
+
+<nav [class]="layoutCssClass" (setLayoutCssClass)="setLayoutCssClass()"></nav>
+
+<content [class]="layoutCssClass">
+  <router-outlet></router-outlet>
+</content>
+
+<footer [class]="layoutCssClass"></footer>

@@ -1,0 +1,64 @@
+* {
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 70px;
+    width: 70px;
+
+    display: inline-flex;
+    background-color: var(--primary-color);
+
+    .icon {
+        color: white;
+        font-size: 40px;
+
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+.items {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+
+    width: inherit;
+
+    .item {
+        display: inline-flex;
+        align-items: center;
+        width: inherit;
+
+        background-color: var(--secondary-color);
+        cursor: pointer;
+
+        .icon {
+            font-size: 30px;
+            margin: 10px 20px;
+            background-color: var(--secondary-color);
+        }
+
+        .title {
+            display: none;
+            font-size: 20px;
+        }
+
+        &:hover {
+            width: 270px;
+
+            .icon, .title {
+                opacity: 0.8;
+            }
+        }
+
+        &:hover .title {
+            display: inherit;
+        }
+    }
+}
