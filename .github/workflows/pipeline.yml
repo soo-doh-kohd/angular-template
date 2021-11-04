@@ -6,7 +6,7 @@ on:
 
 jobs:
   pipeline:
-    uses: soo-doh-kohd/pipeline/.github/workflows/build-angular.yml@main
+    uses: soo-doh-kohd/pipeline/.github/workflows/pipeline.yml@main
     with:
       environment: 'dev' # The environment you are deploying to.
       project-name: 'Angular' # The name of your project.
