@@ -11,3 +11,4 @@ jobs:
       environment: 'dev' # The environment you are deploying to.
       project-name: 'My Angular Web App' # The name of your project.
       project-type: 'Angular' # The type of project (e.g., .NET Core, Angular, Python, etc.).
+      doBuild: false
