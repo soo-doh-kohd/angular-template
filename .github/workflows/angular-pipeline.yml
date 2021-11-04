@@ -1,0 +1,13 @@
+name: Angular Pipeline File
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  pipeline:
+    uses: soo-doh-kohd/pipeline/.github/workflows/angular-pipeline.yml@main
+    with:
+      environment: 'dev' # The environment you are deploying to.
+      project-name: 'My Angular Web App' # The name of your project.
+      node-version: '14.x' # The version of Node the application uses.
