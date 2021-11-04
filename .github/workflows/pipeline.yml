@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  gitflow-pipeline:
+  pipeline:
     uses: soo-doh-kohd/pipeline/.github/workflows/pipeline.yml@main
     with:
       environment: 'dev' # The environment you are deploying to.
